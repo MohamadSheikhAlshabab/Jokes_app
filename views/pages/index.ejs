@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include("../layouts/head")%>
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Home Page
+        </h1>
+        <nav>
+            <ul>
+                <li>
+                <a href="/">
+                        Home
+                    </a>
+                </li>
+                <li><a href="/selectData">
+                        Details
+                    </a>
+                </li>
+                <li>Favorite</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <% console.log(data)%>
+        <div class="all">
+            <% data.forEach((vals)=>{%>
+            <div class="container">
+                <h2>Jokes #</h2>
+                <h3><%=vals.type%></h3>
+                <p><%=vals.setup%></p>
+                <address class="author"><%=vals.punchline%></address>
+            </div>
+            <%})%>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>

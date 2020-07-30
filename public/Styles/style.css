@@ -1,0 +1,38 @@
+.all {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    box-shadow: 5.5px 5.5px 5.5px 5.5px rgba(128, 0, 128, 0.658);
+    text-justify: distribute-all-lines;
+    text-align: justify;
+    text-justify: inter-word;
+    color: rgb(255, 255, 255);
+    background-color: rgba(65, 105, 225, 0.651);
+    padding: 5px;
+    margin: 10px;
+    width: 40vw;
+    text-shadow: 10 10 10 10 rgba(128, 0, 128, 0.658);
+}
+header{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgba(65, 105, 225, 0.651);
+    box-shadow: 5.0px 5.0px 3.0px 3.0px rgba(128, 0, 128, 0.658);
+}
+ul{
+    list-style-type:none;
+    display: flex;
+    flex-wrap: nowrap;
+    color: rgb(255, 255, 255);
+}
+ul>li{
+    color: rgb(255, 255, 255);
+    list-style-type:none;
+    display: inline-block;
+    margin: 5.5px;
+    padding: 5.5px;
+    text-align: center;
+}
