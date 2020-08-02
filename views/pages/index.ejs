@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include("../layouts/head")%>
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <%-include("../layouts/header")%>
+    </h1>
+    </header>
+
+    <main>
+        <% console.log(data)%>
+        <% console.log(data[0].type)%>
+        <% console.log(data[0].setup)%>
+        <% console.log(data[0].punchline)%>
+        <div class="all">
+            <% data.forEach((vals,ind)=>{%>
+                <div class="container">
+                <h2>Jokes #</h2>
+                <% console.log(vals.type)%>
+                <% console.log(vals.setup)%>
+                <% console.log(vals.punchline)%>
+                <h3><%=vals.type%></h3>
+                <p><%=vals.setup%></p>
+                <address class="author"><%=vals.punchline%></address>
+
+                <div>
+                    <form action="/addToDb" method="get">
+                        <input type="hidden" name="type" value="<%=vals.type%>">
+                        <input type="hidden" name="setup" value="<%=vals.setup%>">
+                        <input type="hidden" name="punchline" value="<%=vals.punchline%>">
+                        <input type="submit" value="Add To Database ">
+                    </form>
+                </div>
+            </div>
+            <%})%>
+        </div>
+    </main>
+
+    <footer>
+    <%-include("../layouts/footer")%>>
+    </footer>
+
+</body>
+
+</html>
