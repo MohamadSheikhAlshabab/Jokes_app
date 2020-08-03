@@ -23,13 +23,12 @@ app.set('view engine', 'ejs');
 app.get('/', homeHandler);
 function homeHandler(req, res) {
     let url = 'https://official-joke-api.appspot.com/jokes/programming/ten';
-    let name='Home';
-    superagent.get(url,name)
+    superagent.get(url)
     .then((result) => {
         let arrUrl = result.body.map(val => {
             return new Jokes(val);
         });
-            res.render('pages/index', { data: arrUrl ,name});
+            res.render('pages/index', { data: arrUrl ,name:"Home"});
         });
 }
 
