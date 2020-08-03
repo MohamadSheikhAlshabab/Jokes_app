@@ -113,3 +113,25 @@ input:hover{
       box-shadow: 0.5px 5.5px 5.5px #fff,0.5px 5px 5px #d4b5b0, 2px  7.5px 7.5px #383e56;
 border: 1px solid #fff;
 }
+
+textarea {
+  padding: 5px;
+  color: #f69e7b;
+  background-color: #fff;
+  text-shadow:0.2px 0.2px 0.5px #f7f4eb;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bolder;
+  margin: 15px 10px 15px 10px;
+   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size:large;
+    box-shadow: 0.5px 5.5px 5.5px #f69e7b,0.5px 5px 5px #d4b5b0, 2px  7.5px 7.5px #383e56;
+    border: 1px solid #f69e7b;
+    height:195px ;
+    width:195px;
+}
+textarea:hover{
+  color: #fff;   
+  background-color: #f69e7b;
+      box-shadow: 0.5px 5.5px 5.5px #fff,0.5px 5px 5px #d4b5b0, 2px  7.5px 7.5px #383e56;
+border: 1px solid #fff;
+}

@@ -14,10 +14,6 @@
     <main>
         <div class="all">
             <div class="container">
-                <%console.log(vals)%>
-                <%console.log(vals.type)%>
-                <%console.log(vals.setup)%>
-                <%console.log(vals.punchline)%>
                 <h2>Jokes #</h2>
                 <h3><%=vals.type%></h3>
                 <p><%=vals.setup%></p>
@@ -26,7 +22,7 @@
                 <div>
                     <form action="/update/<%=vals.id%>?_method=put" method="POST">
                         <input type="text" name="type" value="<%=vals.type%>">
-                        <input type="text" name="setup" value="<%=vals.setup%>">
+                        <textarea type="" name="setup" value="<%=vals.setup%>"><%=vals.setup%></textarea>
                         <input type="text" name="punchline" value="<%=vals.punchline%>">
                         <input type="submit" value="Update">
                     </form>
