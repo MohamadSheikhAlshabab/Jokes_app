@@ -91,6 +91,24 @@ client.query(sql,safeVal)
 })
 }
 
+app.get('/random', randomHandler);
+function randomHandler(req, res) {
+    let url = 'https://official-joke-api.appspot.com/jokes/programming/random';
+    superagent.get(url)
+    .then((result) => {
+        let arrUrl = result.body.map(val => {
+            return new Random(val);
+        });
+            res.render('pages/random.ejs', { data: arrUrl ,name:"Random"});
+        });
+}
+
+function Random(val) {
+    this.type = val.type || 'no type';
+    this.setup = val.setup || 'no setup';
+    this.punchline = val.punchline || 'no punchline';
+}
+
 client.connect()
     .then(() => app.listen(PORT, console.log(`up & run on port ${PORT}`)));
 
