@@ -14,21 +14,21 @@
     <main>
         <div class="all">
             <% data.forEach((vals,ind)=>{%>
-            <div class="container">
-                <h2>Jokes #</h2>
-                <h3><%=vals.type%></h3>
-                <p><%=vals.setup%></p>
-                <address class="author"><%=vals.punchline%></address>
-
-                <div>
-                    <form action="/addToDb" method="get">
-                        <input type="hidden" name="type" value="<%=vals.type%>">
-                        <input type="hidden" name="setup" value="<%=vals.setup%>">
-                        <input type="hidden" name="punchline" value="<%=vals.punchline%>">
-                        <input type="submit" value="Add To Database ">
-                    </form>
-                </div>
-            </div>
+                    <div class="container">
+                        <h2>Jokes #</h2>
+                        <h3><%=vals.type%></h3>
+                        <p><%=vals.setup%></p>
+                        <address class="author"><%=vals.punchline%></address>
+                        
+                        <div>
+                            <form action="/addToDb" method="get">
+                                <input type="hidden" name="type" value="<%=vals.type%>">
+                                <input type="hidden" name="setup" value="<%=vals.setup%>">
+                                <input type="hidden" name="punchline" value="<%=vals.punchline%>">
+                                <input type="submit" value="Add To Database ">
+                            </form>
+                        </div>
+                    </div>
             <%})%>
         </div>
     </main>
@@ -36,7 +36,6 @@
     <footer>
         <%-include("../layouts/footer")%>
     </footer>
-
 </body>
 
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include("../layouts/head")%>
+    <title>Details</title>
+</head>
+
+<body>
+    <header>
+        <%-include("../layouts/header")%>
+    </header>
+
+    <main>
+        <div class="all">
+            <%data.forEach(vals=>{%>
+            <div class="container">
+                <%console.log(vals)%>
+                <h2>Jokes #</h2>
+                <h3><%=vals.type%></h3>
+                <p><%=vals.setup%></p>
+                <address class="author"><%=vals.punchline%></address>
+            </div>
+            <%})%>
+        </div>
+    </main>
+
+    <footer>
+        <%-include("../layouts/footer")%>
+    </footer>
+
+</body>
+
+</html>
